@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#A5D6A7"
-    android:gravity="center_horizontal"
     tools:context=".MainActivity">
 
 <!--    <TextView-->
@@ -37,11 +36,18 @@
 <!--        android:layout_height="wrap_content"-->
 <!--        android:text="Submit"-->
 <!--        />-->
+<!--    <ImageView-->
+<!--        android:id="@+id/iv_logo"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:src="@drawable/images"-->
+<!--        />-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="welcome back!"
-        android:layout_marginLeft="50dp"
         android:textSize="40sp"
         android:textStyle="bold"
        />
@@ -97,3 +103,4 @@
         />
 
 </LinearLayout>
+
