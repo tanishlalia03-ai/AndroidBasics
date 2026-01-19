@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
+            android:name=".Bottomnavigation.BottomLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLayout.ClassworkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLayout.Constraint_Layout3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLayout.Constraint_Layout2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ConstraintLayout.ConstriantLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RelativeLayout.RelativeLayoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
