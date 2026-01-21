@@ -1,60 +1,82 @@
 package com.example.androidbasics.Ui
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.fragment.app.Fragment
 import com.example.androidbasics.R
+import com.example.androidbasics.databinding.FragmentHomeBinding
+import com.example.androidbasics.databinding.AlertBoxBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var _binding: FragmentHomeBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        _binding = FragmentHomeBinding.bind(view)
+
+        // Listener for the Default Alert Dialog
+        binding.btnShowDialog.setOnClickListener {
+            showDefaultAlertDialog()
+        }
+
+
+        binding.btnShowDialog2.setOnClickListener {
+            showCustomAlertDialog()
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+    private fun showDefaultAlertDialog() {
+        val builder = AlertDialog.Builder(requireContext())
+
+        builder.setTitle("Test Dialog")
+        builder.setMessage("This is a default Android alert. Is the app still running?")
+
+        builder.setPositiveButton("Yes, it works!") { dialog, _ ->
+            Toast.makeText(requireContext(), "Success!", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
+        }
+
+        builder.setNegativeButton("Cancel") { dialog, _ ->
+            Toast.makeText(requireContext(), "Cancel", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
+        }
+
+        builder.create().show()
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun showCustomAlertDialog() {
+        val dialogBinding = AlertBoxBinding.inflate(LayoutInflater.from(requireContext()))
+
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setView(dialogBinding.root)
+
+        val alertDialog = builder.create()
+        dialogBinding.btnConfirm.setOnClickListener {
+            val inputText = dialogBinding.etConfirm.text.toString()
+
+            if (inputText.equals("DELETE", ignoreCase = false)) {
+                Toast.makeText(requireContext(), "Item Deleted Successfully", Toast.LENGTH_SHORT).show()
+                alertDialog.dismiss()
+            } else {
+                dialogBinding.etConfirm.error = "Please type DELETE to confirm"
             }
+        }
+
+        dialogBinding.btnCancel.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        // 5. Show the dialog
+        alertDialog.show()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
