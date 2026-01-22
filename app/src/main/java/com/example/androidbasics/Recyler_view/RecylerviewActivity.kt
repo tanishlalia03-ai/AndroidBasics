@@ -1,6 +1,7 @@
 package com.example.androidbasics.Recyler_view
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -8,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidbasics.databinding.ActivityRecylerviewBinding
 
-class RecyclerviewActivity : AppCompatActivity() {
+class RecyclerviewActivity : AppCompatActivity() , StudentAdapter.OnItemClickListener{
 
     private lateinit var adapter: StudentAdapter
     private var studentList = ArrayList<Student>()
@@ -27,7 +28,7 @@ class RecyclerviewActivity : AppCompatActivity() {
             insets
         }
 
-        adapter = StudentAdapter(studentList)
+        adapter = StudentAdapter(studentList, this)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
@@ -40,5 +41,10 @@ class RecyclerviewActivity : AppCompatActivity() {
         studentList.add(Student(3, "Tanshi", 20, 100))
 
         adapter.notifyDataSetChanged()
+    }
+
+    override fun onItemClick(position: Int) {
+            Toast.makeText(this, studentList[position].id.toString(), Toast.LENGTH_SHORT).show()
+
     }
 }

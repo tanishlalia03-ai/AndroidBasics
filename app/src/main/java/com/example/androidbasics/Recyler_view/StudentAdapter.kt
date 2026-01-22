@@ -8,8 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidbasics.R
 
-class StudentAdapter(var list : ArrayList<Student>): RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
-
+class StudentAdapter(var list : ArrayList<Student>, var itemClickListener: OnItemClickListener): RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -29,10 +28,15 @@ class StudentAdapter(var list : ArrayList<Student>): RecyclerView.Adapter<Studen
         holder.name.text = item.name
         holder.age.text = item.age.toString()
         holder.marks.text = item.marks.toString()
+        holder.view
     }
 
     override fun getItemCount(): Int {
         return list.size
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
     }
 
 
@@ -41,7 +45,6 @@ class StudentAdapter(var list : ArrayList<Student>): RecyclerView.Adapter<Studen
         val age = view.findViewById<TextView>(R.id.age)
         val name = view.findViewById<TextView>(R.id.name)
         val marks = view.findViewById<TextView>(R.id.marks)
-
 
 
     }
