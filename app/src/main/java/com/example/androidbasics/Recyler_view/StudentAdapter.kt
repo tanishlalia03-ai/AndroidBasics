@@ -28,7 +28,9 @@ class StudentAdapter(var list : ArrayList<Student>, var itemClickListener: OnIte
         holder.name.text = item.name
         holder.age.text = item.age.toString()
         holder.marks.text = item.marks.toString()
-        holder.view
+        holder.itemView.setOnClickListener {
+            itemClickListener.onItemClick(position)
+        }
     }
 
     override fun getItemCount(): Int {
