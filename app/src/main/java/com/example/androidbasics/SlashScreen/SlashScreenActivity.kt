@@ -18,14 +18,12 @@ class SlashScreenActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_slash_screen)
 
-        // Handles the system bars padding
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // MOVED INSIDE: This logic must be inside the onCreate braces to run
         lifecycleScope.launch {
             delay(2000)
             val intent = Intent(this@SlashScreenActivity, BottomLayoutActivity::class.java)

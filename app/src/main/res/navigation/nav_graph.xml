@@ -18,4 +18,9 @@
         android:id="@+id/navigation_notifications"
         android:name="com.example.androidbasics.Ui.NotificationFragment"
         android:label="Notifications" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.androidbasics.Ui.NotificationFragment"
+        android:label="Profile" />
 </navigation>
