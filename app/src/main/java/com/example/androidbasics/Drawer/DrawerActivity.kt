@@ -10,7 +10,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.androidbasics.R
-import com.example.androidbasics.databinding.ActivityDrawerBinding // Ensure this matches your layout name
+import com.example.androidbasics.databinding.ActivityDrawerBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 
@@ -22,39 +22,40 @@ class DrawerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 1. Initialize View Binding
         binding = ActivityDrawerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 2. Setup Toolbar
+        // 1. Link the Toolbar
         setSupportActionBar(binding.appBarDrawer.toolbar)
 
-        // 3. Setup Floating Action Button
         binding.appBarDrawer.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null)
-                .setAnchorView(binding.appBarDrawer.fab) // Use binding instead of R.id.fab
+                .setAnchorView(binding.appBarDrawer.fab)
                 .show()
         }
 
+        // 2. IMPORTANT: Get the drawerLayout from binding
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
-
-        // 4. Setup Navigation Controller
-        // Note: Ensure your FragmentContainerView in XML has the ID nav_host_fragment_content_drawer
         val navController = findNavController(R.id.nav_host_fragment_content_drawer)
 
+        // 3. FIXED: Pass drawerLayout into the AppBarConfiguration
+        // This is what tells the system to show the Hamburger icon instead of a Back arrow
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
-            ), drawerLayout
+            ),
+            drawerLayout // Pass the layout here!
         )
 
+        // 4. Connect everything
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Use activity_main_drawer for the menu if that is your menu file name
         menuInflater.inflate(R.menu.activity_main_drawer, menu)
         return true
     }

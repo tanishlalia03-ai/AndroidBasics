@@ -11,12 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
+
         <activity
-            android:name=".Drawer.Ui.GalleryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Drawer.DrawerActivity"
-            android:exported="false" />
+            android:name=".SlashScreen.SlashScreenActivity"
+            android:exported="false"/>
         <activity
             android:name=".ConstraintLayout.ClassworkActivity"
             android:exported="false" />
@@ -36,7 +34,7 @@
             android:name=".RelativeLayout.RelativeLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".SlashScreen.SlashScreenActivity"
+            android:name=".Drawer.DrawerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
