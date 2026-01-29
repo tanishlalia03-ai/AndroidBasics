@@ -13,8 +13,11 @@
         android:theme="@style/Theme.AndroidBasics">
 
         <activity
+            android:name=".Drawer.DrawerActivity"
+            android:exported="false" />
+        <activity
             android:name=".SlashScreen.SlashScreenActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ConstraintLayout.ClassworkActivity"
             android:exported="false" />
@@ -34,7 +37,7 @@
             android:name=".RelativeLayout.RelativeLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".Drawer.DrawerActivity"
+            android:name=".RoomDatabase.RoomActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
