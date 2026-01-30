@@ -4,32 +4,36 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.androidbasics.Recyler_view.Student
+import com.example.androidbasics.RoomDatabase.User // Ensure this import exists
+import com.example.androidbasics.RoomDatabase.UserDao // Ensure this import exists
 
 
-@Database(entities = [User::class],version = 1)
-abstract class AppDatabase: RoomDatabase() {
+@Database(entities = [User::class, Student::class], version = 2, exportSchema = false)
+abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
-
+    abstract fun studentDao(): StudentDao
 
     companion object {
-
         @Volatile
-        private var INSTANCE: AppDatabase ? = null
+        private var INSTANCE: AppDatabase? = null
 
         fun getDatabase(context: Context): AppDatabase {
 
             return INSTANCE ?: synchronized(this) {
-
                 val instance = Room.databaseBuilder(
-                    context,
+                    context.applicationContext,
                     AppDatabase::class.java,
                     "user_database"
-                ).build()
+                )
+                    // This line prevents crashes when you change the database version
+                    .fallbackToDestructiveMigration()
+                    .build()
+
                 INSTANCE = instance
                 instance
             }
-
         }
     }
 }

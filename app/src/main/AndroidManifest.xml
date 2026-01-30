@@ -38,6 +38,9 @@
             android:exported="false" />
         <activity
             android:name=".RoomDatabase.RoomActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".Recyler_view.RecyclerviewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
