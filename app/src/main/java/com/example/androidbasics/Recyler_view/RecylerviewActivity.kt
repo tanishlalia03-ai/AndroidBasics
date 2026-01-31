@@ -21,7 +21,7 @@ import kotlinx.coroutines.withContext
 class RecyclerviewActivity : AppCompatActivity(), StudentAdapter.OnItemClickListener {
 
     private lateinit var adapter: StudentAdapter
-    private lateinit var database: AppDatabase // Global property
+    private lateinit var database: AppDatabase
     private var studentList = ArrayList<Student>()
     private lateinit var binding: ActivityRecylerviewBinding
 

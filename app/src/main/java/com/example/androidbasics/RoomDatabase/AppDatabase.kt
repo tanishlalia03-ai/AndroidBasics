@@ -5,8 +5,6 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.androidbasics.Recyler_view.Student
-import com.example.androidbasics.RoomDatabase.User // Ensure this import exists
-import com.example.androidbasics.RoomDatabase.UserDao // Ensure this import exists
 
 
 @Database(entities = [User::class, Student::class], version = 2, exportSchema = false)

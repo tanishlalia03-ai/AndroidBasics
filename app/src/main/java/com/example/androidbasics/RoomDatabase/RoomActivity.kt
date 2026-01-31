@@ -1,6 +1,5 @@
 package com.example.androidbasics.RoomDatabase
 
-import android.R.attr.targetId
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
