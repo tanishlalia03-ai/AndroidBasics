@@ -24,6 +24,12 @@ class RecyclertestActivity : AppCompatActivity() {
         employeeList.add(employee(2, "Jane Smith", "Developer"))
         employeeList.add(employee(3, "Mike Ross", "Designer"))
         employeeList.add(employee(4, "Rachel Zane", "HR"))
+        employeeList.add(employee(5, "Tanish", "C.E.O"))
+        employeeList.add(employee(6, "Rachel Zane", "HR"))
+        employeeList.add(employee(7, "Mike Ross", "Designer"))
+        employeeList.add(employee(8, "Rachel Zane", "HR"))
+        employeeList.add(employee(5, "Tanish", "C.E.O"))
+
 
         // 3. Setup Adapter
         adapter = employeeAdapter(employeeList)

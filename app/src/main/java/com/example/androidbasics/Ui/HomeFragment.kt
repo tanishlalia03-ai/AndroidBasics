@@ -9,6 +9,12 @@ import androidx.fragment.app.Fragment
 import com.example.androidbasics.R
 import com.example.androidbasics.databinding.FragmentHomeBinding
 import com.example.androidbasics.databinding.AlertBoxBinding
+import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -28,6 +34,47 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         binding.btnShowDialog2.setOnClickListener {
             showCustomAlertDialog()
         }
+
+        binding.datePicker.setOnClickListener {
+            val datePicker = MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Tanish")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .build()
+
+
+            datePicker.show(parentFragmentManager,"DATE_PICKER")
+
+            datePicker.addOnPositiveButtonClickListener { select->
+                val dateString = SimpleDateFormat("dd/MMM/yyyy", Locale.getDefault()).format(Date(select))
+
+                binding.datetext.text = "Selected Date: $dateString"
+            }
+        }
+
+
+        binding.timePicker.setOnClickListener {
+
+            val timePicker = MaterialTimePicker.Builder()
+                .setTimeFormat(TimeFormat.CLOCK_12H)
+                .setHour(12)
+                .setMinute(0)
+                .setTitleText("Select time")
+                .build()
+
+
+            timePicker.show(parentFragmentManager,"Time_Picker")
+
+            timePicker.addOnPositiveButtonClickListener {
+                val hour = timePicker.hour
+                val minute = timePicker.minute
+
+                val formattedTime = String.format(Locale.getDefault(),"%02d:%02d",hour,minute)
+
+                binding.timetext.text = "Selected Time: $formattedTime"
+            }
+        }
+
+
     }
 
     private fun showDefaultAlertDialog() {
@@ -73,6 +120,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         // 5. Show the dialog
         alertDialog.show()
+
     }
 
     override fun onDestroyView() {
