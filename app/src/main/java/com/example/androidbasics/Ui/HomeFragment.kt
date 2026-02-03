@@ -3,12 +3,15 @@ package com.example.androidbasics.Ui
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.example.androidbasics.R
 import com.example.androidbasics.databinding.FragmentHomeBinding
 import com.example.androidbasics.databinding.AlertBoxBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
@@ -73,6 +76,41 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 binding.timetext.text = "Selected Time: $formattedTime"
             }
         }
+
+
+        binding.bottomSheetBtn.setOnClickListener {
+
+//            creating dialog for bottom sheet
+            val dialog = BottomSheetDialog(requireContext())
+
+            var view = layoutInflater.inflate(R.layout.bottom_sheet_layout,null)
+
+            var nameEt: EditText = view.findViewById<EditText>(R.id.nameET)
+            var ageEt: EditText = view.findViewById<EditText>(R.id.ageET)
+
+            view.findViewById<Button>(R.id.submitBtn).setOnClickListener {
+
+                if(nameEt.text.toString().isEmpty()) {
+                    nameEt.error = "Please enter name"
+                } else if(ageEt.text.toString().isEmpty()) {
+                    ageEt.error = "Please enter age"
+                } else {
+                    Toast.makeText(requireContext(), "Options are filled", Toast.LENGTH_SHORT).show()
+                    dialog.dismiss()
+                }
+            }
+
+
+            view.findViewById<Button>(R.id.closeBtn).setOnClickListener {
+                dialog.dismiss()
+            }
+
+
+            dialog.setContentView(view)
+            dialog.show()
+        }
+
+
 
 
     }
