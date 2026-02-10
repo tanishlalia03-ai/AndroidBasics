@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 
     id("kotlin-kapt")
 }
@@ -66,4 +67,11 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.1.0")
     implementation("androidx.datastore:datastore-preferences-core:1.1.0")
     implementation("androidx.datastore:datastore-core:1.1.0")
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:34.9.0"))
+    implementation("com.google.firebase:firebase-analytics")
+
+
+    implementation("com.google.firebase:firebase-auth")
 }

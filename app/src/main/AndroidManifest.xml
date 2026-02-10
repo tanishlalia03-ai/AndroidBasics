@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,12 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
-
-
         <activity
-        android:name=".Bottomnavigation.BottomLayoutActivity"
-        android:exported="false"/>
-
+            android:name=".Firebase.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Webview.WebActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Bottomnavigation.BottomLayoutActivity"
+            android:exported="false" />
         <activity
             android:name=".RecyclerviewTest.RecyclertestActivity"
             android:exported="false" />
@@ -49,8 +53,8 @@
             android:name=".RoomDatabase.RoomActivity"
             android:exported="false" />
         <activity
-            android:name=".Webview.WebActivity"
-            android:exported="true" >
+            android:name=".Firebase.RegisterActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
