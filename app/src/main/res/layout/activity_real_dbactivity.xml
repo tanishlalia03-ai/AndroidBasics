@@ -48,6 +48,24 @@
         android:textSize="16sp"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Update User"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Delete User"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF" />
+
 
     <TextView
         android:id="@+id/tvStatus"
