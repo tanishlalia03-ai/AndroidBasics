@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Registration"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="40dp"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="15dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Save to Firebase"
+        android:backgroundTint="#FF6200EE"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textAllCaps="false"/>
+
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Status: Waiting..."
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+
+
+
+
+</LinearLayout>
