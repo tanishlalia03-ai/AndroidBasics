@@ -37,7 +37,7 @@ class RealDBActivity : AppCompatActivity() {
             val email = binding.etEmail.text.toString().trim()
 
             if (name.isNotEmpty() && email.isNotEmpty()) {
-                // We use the email as the ID (replacing dots because Firebase doesn't allow them in keys)
+
                 val userId = email.replace(".", ",")
                 writeNewUser(userId, name, email)
             } else {
@@ -51,7 +51,7 @@ class RealDBActivity : AppCompatActivity() {
             val newName = binding.etUsername.text.toString().trim()
 
             if (email.isNotEmpty() && newName.isNotEmpty()) {
-                // Use the same email-to-ID logic to find the record
+
                 val userId = email.replace(".", ",")
                 updateUserName(userId, newName)
             } else {
@@ -87,7 +87,6 @@ class RealDBActivity : AppCompatActivity() {
     fun updateUserName(userId: String, newName: String) {
         val userRef = database.child("users").child(userId)
 
-        // Using "username" because that is what is in your User data class
         val updates = mapOf<String, Any>(
             "username" to newName
         )
