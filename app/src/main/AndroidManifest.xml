@@ -20,6 +20,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
+
+            android:name=".Firebase.RealDBActivity"
+            android:exported="false"/>
+        <activity
             android:name=".Permission.PermissionsActivity"
             android:exported="false" />
         <activity
@@ -65,7 +69,7 @@
             android:name=".RoomDatabase.RoomActivity"
             android:exported="false" />
         <activity
-            android:name=".Firebase.RealDBActivity"
+            android:name=".Firebase.RecyclerDBActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

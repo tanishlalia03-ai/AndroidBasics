@@ -1,6 +1,6 @@
 package com.example.androidbasics.Firebase
 
 data class User(
-    val username: String? = null,
-    val email: String? = null
+    var username: String? = null,
+    var email: String? = null
 )
