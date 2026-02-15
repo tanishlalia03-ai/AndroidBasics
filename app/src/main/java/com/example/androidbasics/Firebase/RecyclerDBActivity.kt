@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
-import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -44,12 +43,10 @@ class RecyclerDBActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
-        // 2. FAB Logic
         binding.addFAB.setOnClickListener {
             showAddUserDialog()
         }
 
-        // 3. Fetch Data
         getUserData()
     }
 
@@ -95,5 +92,6 @@ class RecyclerDBActivity : AppCompatActivity() {
                 Log.e("Firebase", error.message)
             }
         })
+
     }
 }

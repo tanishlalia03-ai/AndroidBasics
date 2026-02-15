@@ -54,7 +54,6 @@ class RealDBAdapter(private val listOfSUsers: ArrayList<User>) :
         holder.editBtn.setOnClickListener {
             if (firebaseKey == null) return@setOnClickListener
 
-            // Simple popup with EditText to change the name
             val editText = EditText(context)
             editText.setText(item.username)
 
