@@ -10,7 +10,7 @@ import com.example.androidbasics.R
 class employeeAdapter(private val employeeList: List<employee>) :
     RecyclerView.Adapter<employeeAdapter.EmployeeViewHolder>() {
 
-    // Inner class to hold the views for each item
+        // Inner class to hold the views for each item
     class EmployeeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvName: TextView = view.findViewById(R.id.tvName)
         val tvRole: TextView = view.findViewById(R.id.tvRole)

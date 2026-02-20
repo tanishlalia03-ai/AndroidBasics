@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 
     id("kotlin-kapt")
 }
@@ -42,6 +43,13 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    packaging {
+        resources {
+            excludes += "/META-INF/INDEX.LIST"
+            excludes += "/META-INF/DEPENDENCIES"
+        }
+    }
 }
 
 dependencies {
@@ -74,10 +82,22 @@ dependencies {
 
 
     implementation("com.google.firebase:firebase-auth")
-
     implementation("com.google.firebase:firebase-database")
 
     //FCM
     implementation("com.google.firebase:firebase-messaging:23.4.1")
+    implementation("com.google.auth:google-auth-library-oauth2-http:1.23.0")
+    implementation("com.google.api-client:google-api-client:2.3.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    //Appwrite
+    implementation("io.appwrite:sdk-for-android:12.0.0")
+
+    // glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
+
+    //Crashlytics
+    implementation("com.google.firebase:firebase-crashlytics")
 
 }
