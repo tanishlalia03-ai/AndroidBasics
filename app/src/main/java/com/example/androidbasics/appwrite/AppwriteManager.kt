@@ -1,4 +1,4 @@
-package com.example.androidbasics.Appwrite
+package com.example.androidbasics.appwrite
 
 import android.content.Context
 import io.appwrite.Client

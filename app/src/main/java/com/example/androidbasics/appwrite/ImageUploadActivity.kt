@@ -1,4 +1,4 @@
-package com.example.androidbasics.Appwrite
+package com.example.androidbasics.appwrite
 
 import android.net.Uri
 import android.os.Bundle

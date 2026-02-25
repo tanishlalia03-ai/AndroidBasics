@@ -44,5 +44,4 @@ class WebActivity : AppCompatActivity() {
         }
         onBackPressedDispatcher.addCallback(this, callback)
     }
-
 }

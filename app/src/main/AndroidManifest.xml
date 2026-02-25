@@ -22,7 +22,7 @@
         android:theme="@style/Theme.AndroidBasics">
         <activity
 
-        android:name=".Appwrite.ImageUploadActivity"
+        android:name=".appwrite.ImageUploadActivity"
         android:exported="false"/>
 
         <activity

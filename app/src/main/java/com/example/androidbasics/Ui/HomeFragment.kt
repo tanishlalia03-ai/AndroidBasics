@@ -54,7 +54,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         }
 
-
         binding.timePicker.setOnClickListener {
 
             val timePicker = MaterialTimePicker.Builder()
