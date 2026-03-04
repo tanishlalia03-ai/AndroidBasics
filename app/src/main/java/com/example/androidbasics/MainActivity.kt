@@ -1,7 +1,6 @@
 package com.example.androidbasics
 
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -11,7 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.androidbasics.RelativeLayout.RelativeLayoutActivity
+import com.example.androidbasics.relativeLayout.RelativeLayoutActivity
 
 class MainActivity : AppCompatActivity() {
 

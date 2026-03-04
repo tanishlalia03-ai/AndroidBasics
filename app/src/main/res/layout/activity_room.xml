@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
-    tools:context=".RoomDatabase.RoomActivity">
+    tools:context=".roomDatabase.RoomActivity">
 
     <EditText
         android:id="@+id/etUserId"

@@ -6,21 +6,21 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.androidbasics.Ui.HomeFragment"
+        android:name="com.example.androidbasics.ui.HomeFragment"
         android:label="Home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.androidbasics.Ui.DashboardFragment"
+        android:name="com.example.androidbasics.ui.DashboardFragment"
         android:label="Dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.androidbasics.Ui.NotificationFragment"
+        android:name="com.example.androidbasics.ui.NotificationFragment"
         android:label="Notifications" />
 
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.androidbasics.Ui.NotificationFragment"
+        android:name="com.example.androidbasics.ui.NotificationFragment"
         android:label="Profile" />
 </navigation>

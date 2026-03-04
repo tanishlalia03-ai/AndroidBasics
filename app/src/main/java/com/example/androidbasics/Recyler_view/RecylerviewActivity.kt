@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidbasics.R
-import com.example.androidbasics.RoomDatabase.AppDatabase
+import com.example.androidbasics.roomDatabase.AppDatabase
 import com.example.androidbasics.databinding.ActivityRecylerviewBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

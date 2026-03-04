@@ -93,11 +93,17 @@ dependencies {
     //Appwrite
     implementation("io.appwrite:sdk-for-android:12.0.0")
 
-    // glide
+    //glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     //Crashlytics
     implementation("com.google.firebase:firebase-crashlytics")
+
+    //retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+// Compose dependencies are usually included by default in new projects
+
 
 }

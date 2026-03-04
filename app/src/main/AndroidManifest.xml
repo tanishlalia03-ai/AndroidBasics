@@ -21,39 +21,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
-
-        android:name=".appwrite.ImageUploadActivity"
-        android:exported="false"/>
-
+            android:name=".firebase.CrashActivity"
+            android:exported="false"/>
         <activity
-            android:name=".Firebase.RecyclerDBActivity"
+            android:name=".appwrite.ImageUploadActivity"
             android:exported="false" />
         <activity
-            android:name=".Firebase.RealDBActivity"
+            android:name=".firebase.RecyclerDBActivity"
             android:exported="false" />
         <activity
-            android:name=".Permission.PermissionsActivity"
+            android:name=".firebase.RealDBActivity"
             android:exported="false" />
         <activity
-            android:name=".Firebase.RegisterActivity"
+            android:name=".permission.PermissionsActivity"
             android:exported="false" />
         <activity
-            android:name=".Firebase.LoginActivity"
+            android:name=".firebase.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".Webview.WebActivity"
+            android:name=".firebase.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Bottomnavigation.BottomLayoutActivity"
+            android:name=".webview.WebActivity"
             android:exported="false" />
         <activity
-            android:name=".RecyclerviewTest.RecyclertestActivity"
+            android:name=".bottomnavigation.BottomLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".Drawer.DrawerActivity"
+            android:name=".recyclerviewTest.RecyclertestActivity"
             android:exported="false" />
         <activity
-            android:name=".SlashScreen.SlashScreenActivity"
+            android:name=".drawer.DrawerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".slashScreen.SlashScreenActivity"
             android:exported="false" />
         <activity
             android:name=".ConstraintLayout.ClassworkActivity"
@@ -71,14 +72,14 @@
             android:name=".ConstraintLayout.ConstriantLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".RelativeLayout.RelativeLayoutActivity"
+            android:name=".relativeLayout.RelativeLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".RoomDatabase.RoomActivity"
+            android:name=".roomDatabase.RoomActivity"
             android:exported="false" />
         <activity
-            android:name=".Firebase.CrashActivity"
-            android:exported="true" >
+            android:name=".api.GetuserdataActivity"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -88,7 +89,7 @@
         </activity>
 
         <service
-            android:name=".FCM.MyFirebaseMessagingService"
+            android:name=".fCM.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
