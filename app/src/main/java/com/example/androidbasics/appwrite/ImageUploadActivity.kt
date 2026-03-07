@@ -78,6 +78,7 @@ class ImageUploadActivity : AppCompatActivity() {
             val tempFile = File(cacheDir, "upload_${System.currentTimeMillis()}.jpg")
             val outputStream = FileOutputStream(tempFile)
 
+
             inputStream?.use { input ->
                 outputStream.use { output ->
                     input.copyTo(output)

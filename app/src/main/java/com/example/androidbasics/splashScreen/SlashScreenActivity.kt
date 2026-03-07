@@ -1,4 +1,4 @@
-package com.example.androidbasics.slashScreen
+package com.example.androidbasics.splashScreen
 
 import android.content.Intent
 import android.os.Bundle

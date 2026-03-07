@@ -99,11 +99,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 }
             }
 
-
             view.findViewById<Button>(R.id.closeBtn).setOnClickListener {
                 dialog.dismiss()
             }
-
 
             dialog.setContentView(view)
             dialog.show()

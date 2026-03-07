@@ -1,4 +1,4 @@
-package com.example.androidbasics.Recyler_view
+package com.example.androidbasics.recyler_view
 
 import android.app.AlertDialog
 import android.view.LayoutInflater

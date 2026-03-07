@@ -1,4 +1,4 @@
-package com.example.androidbasics.Recyler_view
+package com.example.androidbasics.recyler_view
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

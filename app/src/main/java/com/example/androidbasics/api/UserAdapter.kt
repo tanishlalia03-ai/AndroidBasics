@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidbasics.R
 
 // UserItem is the ArrayList class you created earlier
-class UserAdapter(private val userList: UserItem) :
+class UserAdapter(private val userList: Users) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     // ViewHolder holds the references to the views in item_user1.xml

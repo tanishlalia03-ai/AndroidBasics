@@ -65,6 +65,7 @@ class PermissionsActivity : AppCompatActivity() {
         }
     }
 
+
     private fun checkMultiplePermissions() {
         val permissionsNeeded = arrayOf(
             Manifest.permission.CAMERA,

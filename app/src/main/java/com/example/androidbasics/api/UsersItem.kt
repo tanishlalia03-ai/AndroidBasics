@@ -1,6 +1,6 @@
 package com.example.androidbasics.api
 
-data class UserItemItem(
+data class UsersItem(
     val address: Address,
     val company: Company,
     val email: String,

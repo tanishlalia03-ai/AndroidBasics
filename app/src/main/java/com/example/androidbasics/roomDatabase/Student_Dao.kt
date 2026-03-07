@@ -1,7 +1,7 @@
 package com.example.androidbasics.roomDatabase
 
 import androidx.room.*
-import com.example.androidbasics.Recyler_view.Student
+import com.example.androidbasics.recyler_view.Student
 
 @Dao
 interface StudentDao {
