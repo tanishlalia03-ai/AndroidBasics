@@ -28,12 +28,13 @@ class RecyclertestActivity : AppCompatActivity() {
         employeeList.add(Employee(6, "Rachel Zane", "HR"))
         employeeList.add(Employee(7, "Mike Ross", "Designer"))
         employeeList.add(Employee(8, "Rachel Zane", "HR"))
-        employeeList.add(Employee(5, "Tanish", "C.E.O"))
+        employeeList.add(Employee(9, "Tanish", "C.E.O"))
 
 
         // 3. Setup Adapter
         adapter = EmployeeAdapter(employeeList)
         recyclerView1.layoutManager = LinearLayoutManager(this)
         recyclerView1.adapter = adapter
+
     }
 }

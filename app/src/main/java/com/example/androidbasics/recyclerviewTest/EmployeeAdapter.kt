@@ -16,6 +16,7 @@ class EmployeeAdapter(private val employeeList: List<Employee>) :
         val tvRole: TextView = view.findViewById(R.id.tvRole)
     }
 
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmployeeViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_test, parent, false)

@@ -21,8 +21,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
+
+
+        android:name=".mvvm.view.MVVMActivity"
+        android:exported="false"/>
+        <activity
+            android:name=".api.GetuserdataActivity"
+            android:exported="false" />
+        <activity
             android:name=".firebase.CrashActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".appwrite.ImageUploadActivity"
             android:exported="false" />
@@ -78,7 +86,7 @@
             android:name=".roomDatabase.RoomActivity"
             android:exported="false" />
         <activity
-            android:name=".api.GetuserdataActivity"
+            android:name=".mlkit.TranslateActivity"
             android:exported="true">
 
             <intent-filter>

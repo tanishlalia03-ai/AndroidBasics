@@ -52,6 +52,7 @@ class DrawerActivity : AppCompatActivity() {
         // 4. Connect everything
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

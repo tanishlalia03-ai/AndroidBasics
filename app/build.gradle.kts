@@ -103,7 +103,12 @@ dependencies {
     //retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-// Compose dependencies are usually included by default in new projects
+   // Compose dependencies are usually included by default in new projects
 
+    //google ml kit
+    implementation("com.google.mlkit:translate:17.0.3")
+
+    // This bridges Google Play Services Tasks and Kotlin Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.10.2")
 
 }
