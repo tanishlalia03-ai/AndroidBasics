@@ -78,7 +78,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
 
         binding.bottomSheetBtn.setOnClickListener {
-
 //            creating dialog for bottom sheet
             val dialog = BottomSheetDialog(requireContext())
 
@@ -106,9 +105,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             dialog.setContentView(view)
             dialog.show()
         }
-
-
-
 
     }
 

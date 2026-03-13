@@ -111,4 +111,12 @@ dependencies {
     // This bridges Google Play Services Tasks and Kotlin Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.10.2")
 
+    implementation("com.google.mlkit:text-recognition:16.0.1")
+
+
+    implementation("androidx.camera:camera-core:1.3.4")
+    implementation("androidx.camera:camera-camera2:1.3.4")
+    implementation("androidx.camera:camera-lifecycle:1.3.4")
+    implementation("androidx.camera:camera-view:1.3.4")
+
 }

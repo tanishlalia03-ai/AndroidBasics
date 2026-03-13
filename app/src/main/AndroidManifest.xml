@@ -21,10 +21,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
+            android:name=".mlkit.TranslateActivity"
+            android:exported="false"/>
 
-
-        android:name=".mvvm.view.MVVMActivity"
-        android:exported="false"/>
+        <activity
+            android:name=".mvvm.view.MVVMActivity"
+            android:exported="false" />
         <activity
             android:name=".api.GetuserdataActivity"
             android:exported="false" />
@@ -86,7 +88,7 @@
             android:name=".roomDatabase.RoomActivity"
             android:exported="false" />
         <activity
-            android:name=".mlkit.TranslateActivity"
+            android:name=".mlkit.OCRActivity"
             android:exported="true">
 
             <intent-filter>

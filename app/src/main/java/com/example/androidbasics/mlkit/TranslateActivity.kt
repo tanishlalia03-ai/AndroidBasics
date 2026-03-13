@@ -19,6 +19,8 @@ class TranslateActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTranslateBinding
     private val translationHelper = TranslationHelper()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -67,6 +69,7 @@ class TranslateActivity : AppCompatActivity() {
             binding.statusText.text = "Status: Ready"
         }
     }
+
 
     override fun onDestroy() {
         super.onDestroy()
