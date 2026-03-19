@@ -1,6 +1,7 @@
 package com.example.androidbasics
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.animation.AnimationUtils
 import android.widget.Button
@@ -10,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.androidbasics.androidSDK.MyForegroundService
 import com.example.androidbasics.relativeLayout.RelativeLayoutActivity
 
 class MainActivity : AppCompatActivity() {
@@ -28,27 +30,33 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        log=findViewById<Button>(R.id.login)
-        e1=findViewById<EditText>(R.id.email1)
-        pass=findViewById<EditText>(R.id.password1)
+//        log=findViewById<Button>(R.id.login)
+//        e1=findViewById<EditText>(R.id.email1)
+//        pass=findViewById<EditText>(R.id.password1)
+//
+//        log.setOnClickListener {
+//            var e2 = e1.text.toString()
+//            var pass2= pass.text.toString()
+//
+//            if(e2.toString() == "tanishlalia@gmail.com" && pass2.toString()=="123"){
+//
+//                val intent = Intent(this, RelativeLayoutActivity:: class.java)
+//                startActivity(intent)
+//            }
+//
+//            else {
+//                val shake = AnimationUtils.loadAnimation(this, R.anim.shake)
+//                log.startAnimation(shake)
+//                val toast = Toast.makeText(this, "Please enter correct", Toast.LENGTH_SHORT).show()
+//            }
+//        }
 
-        log.setOnClickListener {
-            var e2 = e1.text.toString()
-            var pass2= pass.text.toString()
-
-            if(e2.toString() == "tanishlalia@gmail.com" && pass2.toString()=="123"){
-
-                val intent = Intent(this, RelativeLayoutActivity:: class.java)
-                startActivity(intent)
-            }
-
-            else {
-                val shake = AnimationUtils.loadAnimation(this, R.anim.shake)
-                log.startAnimation(shake)
-                val toast = Toast.makeText(this, "Please enter correct", Toast.LENGTH_SHORT).show()
-            }
+        val intent = Intent(this, MyForegroundService::class.java)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent)
+        } else {
+            startService(intent)
         }
-
 
 
     }

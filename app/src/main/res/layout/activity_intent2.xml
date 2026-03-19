@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntentActivity2">
+
+
+    <Button android:id="@+id/btnSms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send SMS" />
+
+    <Button android:id="@+id/btnDial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Dialer" />
+
+    <Button android:id="@+id/btnWhatsApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WhatsApp Message" />
+
+    <Button android:id="@+id/btnInstagram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open Instagram" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Email" />
+
+</LinearLayout>

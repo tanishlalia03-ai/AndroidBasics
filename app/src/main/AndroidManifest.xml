@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
     <application
         android:allowBackup="true"
@@ -21,9 +23,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
-            android:name=".mlkit.TranslateActivity"
+            android:name=".androidSDK.ReceiverActivity"
             android:exported="false"/>
-
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mlkit.TranslateActivity"
+            android:exported="false" />
         <activity
             android:name=".mvvm.view.MVVMActivity"
             android:exported="false" />
@@ -89,7 +96,10 @@
             android:exported="false" />
         <activity
             android:name=".mlkit.OCRActivity"
-            android:exported="true">
+            android:exported="false" />
+        <activity
+            android:name=".IntentActivity2"
+            android:exported="true" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -106,12 +116,26 @@
             </intent-filter>
         </service>
 
+        <receiver
+            android:name=".androidSDK.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_notification" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="fcm_default_channel" />
+
+        <service
+            android:name=".androidSDK.MyForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            tools:ignore="MissingClass" />
     </application>
 
 </manifest>
