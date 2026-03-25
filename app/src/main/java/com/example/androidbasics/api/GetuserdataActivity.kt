@@ -7,13 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidbasics.R
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -51,7 +47,6 @@ class GetuserdataActivity : AppCompatActivity() {
 
         viewModel.userList.observe(this){ userList ->
             Log.d("user List", userList.toString())
-
         }
 
         viewModel.error.observe(this){error ->
@@ -60,38 +55,5 @@ class GetuserdataActivity : AppCompatActivity() {
 
         viewModel.getUsersInViewModel()
 
-        // 3. Fetch Data using Coroutines
-//        lifecycleScope.launch {
-//            try {
-//                // Network call on IO thread
-//                val responseList = withContext(Dispatchers.IO) {
-//                    api.getUsers()
-//                }
-//
-//                // 4. Update UI on Main thread
-//                withContext(Dispatchers.Main) {
-//                    if (responseList != null && responseList.isNotEmpty()) {
-//                        Log.d("API_RESULT", "Users found: ${responseList.size}")
-//
-//                        // Safely convert standard List to your custom UserItem class
-//                        val displayData = Users()
-//                        displayData.addAll(responseList)
-//
-//                        // Set the adapter
-//                        val adapter = UserAdapter(displayData)
-//                        recyclerView.adapter = adapter
-//                    } else {
-//                        Toast.makeText(this@GetuserdataActivity, "No data found", Toast.LENGTH_SHORT).show()
-//                    }
-//                }
-//
-//            } catch (e: Exception) {
-//                // This catches the "Java error" (ClassCast) or Network errors
-//                Log.e("API_ERROR", "Error: ${e.message}")
-//                withContext(Dispatchers.Main) {
-//                    Toast.makeText(this@GetuserdataActivity, "Error: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
-//                }
-//            }
-//        }
     }
 }

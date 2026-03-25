@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- For sensors -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -23,8 +27,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
-            android:name=".androidSDK.ReceiverActivity"
+            android:name=".androidSDK.SensorActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".IntentActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".androidSDK.ReceiverActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
@@ -98,9 +109,8 @@
             android:name=".mlkit.OCRActivity"
             android:exported="false" />
         <activity
-            android:name=".IntentActivity2"
+            android:name=".assignement.SensorDisplayActivity"
             android:exported="true" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -136,6 +146,10 @@
             android:exported="false"
             android:foregroundServiceType="dataSync"
             tools:ignore="MissingClass" />
+        <service
+            android:name=".assignement.ProximityService"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 </manifest>
