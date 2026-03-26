@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- For sensors -->
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -16,6 +15,8 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -27,9 +28,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
-            android:name=".androidSDK.SensorActivity"
+            android:name=".assignement.SensorDisplayActivity"
             android:exported="false"/>
-
+        <activity
+            android:name=".androidSDK.SensorActivity"
+            android:exported="false" />
         <activity
             android:name=".IntentActivity2"
             android:exported="false" />
@@ -109,8 +112,8 @@
             android:name=".mlkit.OCRActivity"
             android:exported="false" />
         <activity
-            android:name=".assignement.SensorDisplayActivity"
-            android:exported="true" >
+            android:name=".maps.LocationActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
