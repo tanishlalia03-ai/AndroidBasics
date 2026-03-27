@@ -28,8 +28,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBasics">
         <activity
-            android:name=".assignement.SensorDisplayActivity"
+            android:name=".maps.LocationActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".assignement.SensorDisplayActivity"
+            android:exported="false" />
         <activity
             android:name=".androidSDK.SensorActivity"
             android:exported="false" />
@@ -112,7 +116,7 @@
             android:name=".mlkit.OCRActivity"
             android:exported="false" />
         <activity
-            android:name=".maps.LocationActivity"
+            android:name=".chatboat.ChatboatActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

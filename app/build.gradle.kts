@@ -123,4 +123,7 @@ dependencies {
     //Location
     implementation("com.google.android.gms:play-services-location:21.0.1")
 
+    //chatboat
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
+
 }
