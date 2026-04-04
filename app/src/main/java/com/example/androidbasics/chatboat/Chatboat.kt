@@ -1,7 +1,7 @@
 package com.example.androidbasics.chatboat
 
 import com.google.ai.client.generativeai.GenerativeModel
-import com.google.ai.client.generativeai.type.content // Essential Import
+import com.google.ai.client.generativeai.type.content
 import org.json.JSONObject
 
 object Chatboat {

@@ -126,4 +126,15 @@ dependencies {
     //chatboat
     implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
 
+    //maps
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    implementation("com.razorpay:checkout:1.6.4")
+
+    //Barcode scanning
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
+
+    implementation("com.airbnb.android:lottie:3.4.0")
+
 }
