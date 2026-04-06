@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView android:id="@+id/tvColId" android:layout_width="100dp" android:layout_height="wrap_content" android:text="1" />
+    <TextView android:id="@+id/tvColName" android:layout_width="150dp" android:layout_height="wrap_content" android:text="John Doe" />
+    <TextView android:id="@+id/tvColEmail" android:layout_width="150dp" android:layout_height="wrap_content" android:text="john@example.com" />
+    <TextView android:id="@+id/tvColPhone" android:layout_width="120dp" android:layout_height="wrap_content" android:text="9876543210" />
+
+</LinearLayout>

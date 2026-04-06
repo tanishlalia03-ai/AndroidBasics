@@ -17,6 +17,8 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -29,9 +31,14 @@
         android:theme="@style/Theme.AndroidBasics"
         tools:replace="android:allowBackup">
         <activity
+            android:name=".mlkit.RecognitionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mlkit.BarCodeScanningActivity"
+            android:exported="false" />
+        <activity
             android:name=".androidSDK.PaymentActivity"
-            android:exported="false"/>
-
+            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -97,7 +104,6 @@
         <activity
             android:name=".bottomnavigation.BottomLayoutActivity"
             android:exported="false" />
-
         <activity
             android:name=".recyclerviewTest.RecyclertestActivity"
             android:exported="false" />
@@ -132,8 +138,8 @@
             android:name=".mlkit.OCRActivity"
             android:exported="false" />
         <activity
-            android:name=".mlkit.BarCodeScanningActivity"
-            android:exported="true" >
+            android:name=".excelSheet.ExcelActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -198,6 +204,16 @@
             android:name=".assignement.ProximityService"
             android:enabled="true"
             android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

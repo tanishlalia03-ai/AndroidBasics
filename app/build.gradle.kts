@@ -137,4 +137,17 @@ dependencies {
 
     implementation("com.airbnb.android:lottie:3.4.0")
 
+    //Excel sheet
+    implementation("org.apache.poi:poi:5.2.3")
+    // OOXML support for .xlsx (using XSSFWorkbook)
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
+
+    // Required to handle the XML structures under the hood
+    implementation("com.fasterxml.woodstox:woodstox-core:6.5.0")
+
+    //face detection
+    implementation("com.google.mlkit:face-detection:16.1.7")
+
+
+
 }
