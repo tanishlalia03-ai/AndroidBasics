@@ -148,6 +148,9 @@ dependencies {
     //face detection
     implementation("com.google.mlkit:face-detection:16.1.7")
 
+    //ads
+    implementation("com.google.android.gms:play-services-ads:23.0.0")
+
 
 
 }

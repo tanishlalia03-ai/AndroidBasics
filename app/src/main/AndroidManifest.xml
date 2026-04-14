@@ -31,8 +31,12 @@
         android:theme="@style/Theme.AndroidBasics"
         tools:replace="android:allowBackup">
         <activity
-            android:name=".excelSheet.ExcelActivity"
+            android:name=".mlkit.RecognitionActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".excelSheet.ExcelActivity"
+            android:exported="false" />
         <activity
             android:name=".mlkit.BarCodeScanningActivity"
             android:exported="false" />
@@ -138,8 +142,8 @@
             android:name=".mlkit.OCRActivity"
             android:exported="false" />
         <activity
-            android:name=".mlkit.RecognitionActivity"
-            android:exported="true" >
+            android:name=".advertisement.Ads1Activity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -214,6 +218,10 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
     </application>
 
 </manifest>
