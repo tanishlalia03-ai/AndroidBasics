@@ -151,7 +151,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         // 5. Show the dialog
         alertDialog.show()
-
     }
 
     override fun onDestroyView() {
